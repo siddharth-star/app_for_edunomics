@@ -69,7 +69,7 @@ def number(s):
     return ("".join(l),''.join(t))
 
 def quit():
-    messagebox.showinfo(title='Thankyou For using', message='Created by :\nEdunomics team')
+    messagebox.showinfo(title='Thankyou For using', message='Created by :\nSiddharth for Edunomics team')
     window.destroy()
 
 def clear():
@@ -90,8 +90,8 @@ def company():
     data["Distributor Item code"].fillna("Not Define", inplace = True) 
     dis=[]
     for i in range(len(data2['new'])):
-        if (fuzz.WRatio(num,data2['Company Dscription'][i])>=85.0):
-            if (fuzz.WRatio(s,data2['new'][i])>=85.0):
+        if (fuzz.WRatio(num,data2['Company Dscription'][i])>=95.0):
+            if (fuzz.WRatio(s,data2['new'][i])>=95.0):
                 dis.append([data['Distributor Item code'][i],data['Company Dscription'][i]])
 
     with open('distributor.txt', 'w') as file_handler:
